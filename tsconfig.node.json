@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        // Playwright runs on Node, but `page.evaluate` callbacks are typed
+        // against the browser, so both libraries are needed here.
+        "lib": ["ES2023", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "types": ["node"],
+        "strict": true,
+        "noEmit": true,
+        "isolatedModules": true,
+        "verbatimModuleSyntax": true,
+        "skipLibCheck": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    },
+    "include": [
+        "e2e",
+        "vite.config.ts",
+        "vitest.config.ts",
+        "playwright.config.ts"
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "name": "bwinkeler-practice",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "description": "Practice Companion is a static, installable, local-first workspace for planning, running, and reviewing piano and keyboard practice.",
+    "license": "MIT",
+    "engines": {
+        "node": ">=22.14.0"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview --host 127.0.0.1 --port 4327",
+        "check": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
+        "lint": "eslint .",
+        "format": "prettier --check .",
+        "format:write": "prettier --write .",
+        "test": "vitest run",
+        "test:e2e": "playwright test",
+        "icons": "node scripts/generate-icons.mjs",
+        "check:artifacts": "node scripts/check-artifacts.mjs",
+        "validate": "npm run format && npm run lint && npm run check && npm run test && npm run build && npm run check:artifacts",
+        "deploy": "wrangler pages deploy dist --project-name=bwinkeler-practice"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brunowinkeler/bwinkeler-practice.git"
+    },
+    "keywords": [
+        "piano",
+        "keyboard",
+        "practice",
+        "metronome",
+        "pwa",
+        "offline",
+        "static"
+    ],
+    "author": "Bruno Winkeler",
+    "bugs": {
+        "url": "https://github.com/brunowinkeler/bwinkeler-practice/issues"
+    },
+    "homepage": "https://practice.bwinkeler.com",
+    "dependencies": {
+        "dexie": "4.4.5",
+        "react": "19.2.8",
+        "react-dom": "19.2.8",
+        "react-router": "7.18.2"
+    },
+    "devDependencies": {
+        "@axe-core/playwright": "4.13.0",
+        "@eslint/js": "10.0.1",
+        "@playwright/test": "1.62.1",
+        "@types/node": "22.20.1",
+        "@types/react": "19.2.18",
+        "@types/react-dom": "19.2.4",
+        "@vitejs/plugin-react": "6.1.0",
+        "eslint": "10.8.1",
+        "eslint-plugin-react-hooks": "7.1.1",
+        "fake-indexeddb": "6.2.5",
+        "globals": "17.11.0",
+        "jsdom": "29.1.1",
+        "prettier": "3.9.6",
+        "typescript": "6.0.3",
+        "typescript-eslint": "8.67.0",
+        "vite": "8.2.2",
+        "vite-plugin-pwa": "1.3.0",
+        "vitest": "4.1.11",
+        "workbox-window": "7.4.1",
+        "wrangler": "4.125.0"
+    }
+}
