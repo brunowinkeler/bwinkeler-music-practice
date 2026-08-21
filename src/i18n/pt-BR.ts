@@ -263,7 +263,7 @@ export const ptBR = {
     "progress.totalMinutes": "Minutos praticados",
     "progress.practiceDays": "Dias com estudo",
     "progress.sessions": "Sessões",
-    "progress.streak": "Dias seguidos: {count}",
+    "progress.streak": "Dias seguidos",
     "progress.byDay": "Por dia",
     "progress.byArea": "Por área de estudo",
     "progress.recent": "Atividades recentes",

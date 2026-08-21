@@ -89,9 +89,7 @@ export function ProgressPage() {
                 </div>
                 <div>
                     <p className="summary-value">{streak}</p>
-                    <p className="muted">
-                        {t("progress.streak", { count: streak })}
-                    </p>
+                    <p className="muted">{t("progress.streak")}</p>
                 </div>
             </section>
 

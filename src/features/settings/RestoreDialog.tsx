@@ -29,6 +29,7 @@ export function RestoreDialog({
     const inputRef = useRef<HTMLInputElement>(null);
     const [preview, setPreview] = useState<ParsedBackup | null>(null);
     const [error, setError] = useState<string | null>(null);
+    const [busy, setBusy] = useState(false);
 
     const reset = () => {
         setPreview(null);
@@ -82,15 +83,17 @@ export function RestoreDialog({
                         type="button"
                         id="confirm-restore"
                         className="button button-danger"
-                        disabled={preview === null}
+                        disabled={preview === null || busy}
                         onClick={() => {
                             if (!preview) {
                                 return;
                             }
+                            setBusy(true);
                             void store
                                 .restoreSnapshot(preview.snapshot)
                                 .then(() => {
                                     store.announce(t("restore.done"));
+                                    setBusy(false);
                                     reset();
                                     onClose();
                                 });

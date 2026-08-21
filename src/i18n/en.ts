@@ -258,7 +258,7 @@ export const en: Messages = {
     "progress.totalMinutes": "Minutes practised",
     "progress.practiceDays": "Days with practice",
     "progress.sessions": "Sessions",
-    "progress.streak": "Days in a row: {count}",
+    "progress.streak": "Days in a row",
     "progress.byDay": "By day",
     "progress.byArea": "By practice area",
     "progress.recent": "Recent activities",

@@ -65,6 +65,8 @@ test.describe("backup and export", () => {
             "1 sessões",
         );
         await page.locator("#confirm-restore").click();
+        // The dialog closes only after the replacement transaction commits.
+        await expect(page.locator("#confirm-restore")).toBeHidden();
 
         await page.goto("/history");
         await expect(page.getByText("Sessão para backup")).toBeVisible();
