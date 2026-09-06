@@ -1,17 +1,17 @@
 # Practice Companion Product Proposal
 
-| Field | Value |
-| --- | --- |
-| Document | `BW-PRACTICE-CONCEPT-001` |
-| Version | 0.1 |
-| Status | Implemented as `bwinkeler-music-practice`; see the sibling documents in this `docs/` directory for the accepted decisions |
-| Date | 2026-08-21 |
-| Working product name | Practice Companion |
-| Proposed service ID | `practice` |
-| Proposed origin | `https://practice.bwinkeler.com` |
-| Proposed repository | `bwinkeler-practice` |
-| Primary user | A self-directed piano or keyboard learner |
-| Runtime model | Static, installable, local-first web application |
+| Field                | Value                                                                                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Document             | `BW-PRACTICE-CONCEPT-001`                                                                                                 |
+| Version              | 0.1                                                                                                                       |
+| Status               | Implemented as `bwinkeler-music-practice`; see the sibling documents in this `docs/` directory for the accepted decisions |
+| Date                 | 2026-08-21                                                                                                                |
+| Working product name | Practice Companion                                                                                                        |
+| Proposed service ID  | `practice`                                                                                                                |
+| Proposed origin      | `https://practice.bwinkeler.com`                                                                                          |
+| Proposed repository  | `bwinkeler-practice`                                                                                                      |
+| Primary user         | A self-directed piano or keyboard learner                                                                                 |
+| Runtime model        | Static, installable, local-first web application                                                                          |
 
 > The Phase 1 scope of this proposal was built in `bwinkeler-music-practice`.
 > The accepted architecture, requirement baseline, and decisions live in the
@@ -159,15 +159,15 @@ repertoire, sight-reading, ear training, harmony, improvisation, and technique.
 
 These criteria can be evaluated locally without analytics or telemetry:
 
-| Criterion | Proposed target |
-| --- | --- |
-| First useful result | A new user can create or select a starter routine and save a completed session within three minutes. |
-| Recurring use | A returning user can start the last-used routine within 20 seconds. |
-| Session focus | Starting, pausing, advancing, and finishing a session never requires leaving the session view. |
-| Recovery | A user can export, delete local data, and restore an equivalent state from JSON in a tested end-to-end flow. |
-| Offline operation | Every MVP flow works after an offline reload following the first successful load. |
-| Accessibility | Core flows meet WCAG 2.2 AA and complete with keyboard-only input. |
-| Operational simplicity | The production runtime has no application server, database, VPS route, or secret. |
+| Criterion              | Proposed target                                                                                              |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------ |
+| First useful result    | A new user can create or select a starter routine and save a completed session within three minutes.         |
+| Recurring use          | A returning user can start the last-used routine within 20 seconds.                                          |
+| Session focus          | Starting, pausing, advancing, and finishing a session never requires leaving the session view.               |
+| Recovery               | A user can export, delete local data, and restore an equivalent state from JSON in a tested end-to-end flow. |
+| Offline operation      | Every MVP flow works after an offline reload following the first successful load.                            |
+| Accessibility          | Core flows meet WCAG 2.2 AA and complete with keyboard-only input.                                           |
+| Operational simplicity | The production runtime has no application server, database, VPS route, or secret.                            |
 
 Usage frequency is a personal product outcome, not something the application
 should transmit. The owner can evaluate after four to six weeks whether the app
@@ -199,15 +199,15 @@ the proposed product direction.
 
 ### 5.3 Jobs to be done
 
-| Situation | User job | Desired result |
-| --- | --- | --- |
-| Beginning daily practice | Select an appropriate routine without reconstructing it from memory | Practice starts quickly |
-| Working through a course | Associate activities with a course, module, or lesson | External learning material and personal practice remain connected |
-| Practicing technique | Use a target tempo and timer without opening separate tools | The current task stays visible and measurable |
-| Encountering a problem | Capture a short observation or next action | The next session begins with context |
-| Ending a session early | Save the work that actually happened | History remains honest rather than all-or-nothing |
-| Reviewing the week | Compare time across practice areas and days | The next routine can be adjusted intentionally |
-| Changing devices or clearing storage | Export and restore the complete practice record | The learner controls recovery |
+| Situation                            | User job                                                            | Desired result                                                    |
+| ------------------------------------ | ------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Beginning daily practice             | Select an appropriate routine without reconstructing it from memory | Practice starts quickly                                           |
+| Working through a course             | Associate activities with a course, module, or lesson               | External learning material and personal practice remain connected |
+| Practicing technique                 | Use a target tempo and timer without opening separate tools         | The current task stays visible and measurable                     |
+| Encountering a problem               | Capture a short observation or next action                          | The next session begins with context                              |
+| Ending a session early               | Save the work that actually happened                                | History remains honest rather than all-or-nothing                 |
+| Reviewing the week                   | Compare time across practice areas and days                         | The next routine can be adjusted intentionally                    |
+| Changing devices or clearing storage | Export and restore the complete practice record                     | The learner controls recovery                                     |
 
 ### 5.4 Core scenarios
 
@@ -356,12 +356,12 @@ data remain on this device and should be backed up periodically.
 
 The proposed starter routine is editable and contains:
 
-| Activity | Practice area | Planned time |
-| --- | --- | ---: |
-| Warm-up | Technique | 5 minutes |
-| Scales or chords | Technique | 10 minutes |
-| Current lesson | Study | 10 minutes |
-| Repertoire | Repertoire | 15 minutes |
+| Activity         | Practice area | Planned time |
+| ---------------- | ------------- | -----------: |
+| Warm-up          | Technique     |    5 minutes |
+| Scales or chords | Technique     |   10 minutes |
+| Current lesson   | Study         |   10 minutes |
+| Repertoire       | Repertoire    |   15 minutes |
 
 The learner may decline it and begin with an empty state.
 
@@ -713,13 +713,13 @@ session is completed or explicitly discarded.
 
 ### 8.1 Primary destinations
 
-| Destination | Purpose |
-| --- | --- |
-| Today | Start or resume practice and see the immediate weekly context |
-| Routines | Create and organize reusable practice routines and activities |
-| History | Review and edit completed sessions |
-| Progress | Inspect time, consistency, practice areas, and selected tempo history |
-| Settings | Configure the device, backup data, restore, update, or delete data |
+| Destination | Purpose                                                               |
+| ----------- | --------------------------------------------------------------------- |
+| Today       | Start or resume practice and see the immediate weekly context         |
+| Routines    | Create and organize reusable practice routines and activities         |
+| History     | Review and edit completed sessions                                    |
+| Progress    | Inspect time, consistency, practice areas, and selected tempo history |
+| Settings    | Configure the device, backup data, restore, update, or delete data    |
 
 An active session is a focused mode rather than another persistent navigation
 destination.
@@ -814,20 +814,20 @@ must be respected.
 
 Every major view must define useful empty, success, and failure states.
 
-| State | Expected behavior |
-| --- | --- |
-| No routines | Offer starter routine, New routine, and Quick Practice without explanatory clutter |
-| No history | Explain that completed sessions appear here and provide a Start action |
-| Active session recovered | Show elapsed state and explicit Resume or Discard choices |
-| Offline | Continue all MVP functions; defer only update checks or external links |
+| State                      | Expected behavior                                                                  |
+| -------------------------- | ---------------------------------------------------------------------------------- |
+| No routines                | Offer starter routine, New routine, and Quick Practice without explanatory clutter |
+| No history                 | Explain that completed sessions appear here and provide a Start action             |
+| Active session recovered   | Show elapsed state and explicit Resume or Discard choices                          |
+| Offline                    | Continue all MVP functions; defer only update checks or external links             |
 | Storage persistence denied | Explain that browser storage may be removed and recommend installation plus backup |
-| Storage quota exceeded | Reject the write safely, preserve existing data, and offer export/data management |
-| Invalid backup | Report the exact category of failure without partially importing records |
-| Newer backup schema | Refuse unsupported import and preserve current data |
-| Update available | Offer update after the active session ends |
-| Audio unavailable | Keep timer and visual beat controls available; explain the browser limitation |
-| External link unavailable | Preserve the activity and allow practice without the source page |
-| Unexpected error | Preserve the active draft when possible and expose a safe recovery action |
+| Storage quota exceeded     | Reject the write safely, preserve existing data, and offer export/data management  |
+| Invalid backup             | Report the exact category of failure without partially importing records           |
+| Newer backup schema        | Refuse unsupported import and preserve current data                                |
+| Update available           | Offer update after the active session ends                                         |
+| Audio unavailable          | Keep timer and visual beat controls available; explain the browser limitation      |
+| External link unavailable  | Preserve the activity and allow practice without the source page                   |
+| Unexpected error           | Preserve the active draft when possible and expose a safe recovery action          |
 
 Destructive actions must identify what will be removed. Error messages should be
 actionable and should not expose stack traces, raw imported content, or internal
@@ -855,16 +855,16 @@ Recommended qualities:
 
 An initial palette direction, subject to contrast validation, is:
 
-| Token | Light direction | Purpose |
-| --- | --- | --- |
-| Canvas | cool near-white | Main background |
-| Surface | white | Controls, repeated list items, and dialogs |
-| Ink | near-black green | Primary text |
-| Muted | neutral gray-green | Secondary text |
-| Primary | deep green | Start, resume, and selected state |
-| Stop | lacquer red | Stop and destructive confirmation |
-| Tempo | clear blue | Metronome and tempo evidence |
-| Accent | muted brass | Goals and restrained highlights |
+| Token   | Light direction    | Purpose                                    |
+| ------- | ------------------ | ------------------------------------------ |
+| Canvas  | cool near-white    | Main background                            |
+| Surface | white              | Controls, repeated list items, and dialogs |
+| Ink     | near-black green   | Primary text                               |
+| Muted   | neutral gray-green | Secondary text                             |
+| Primary | deep green         | Start, resume, and selected state          |
+| Stop    | lacquer red        | Stop and destructive confirmation          |
+| Tempo   | clear blue         | Metronome and tempo evidence               |
+| Accent  | muted brass        | Goals and restrained highlights            |
 
 The final palette must be tested rather than accepted from token names alone. A
 dark theme should reassign contrast deliberately instead of mechanically
@@ -1102,15 +1102,15 @@ should remain:
 
 Proposed defensive limits are:
 
-| Field | Limit |
-| --- | ---: |
-| Activity or routine title | 120 Unicode characters |
-| Short source/reference label | 200 Unicode characters |
-| URL | 2,048 characters and `https:` only by default |
-| Note or instructions | 10,000 Unicode characters |
-| Routine steps | 100 per routine |
-| BPM | Integer from 30 through 300 |
-| Imported JSON file | 5 MiB before attachments exist |
+| Field                        |                                         Limit |
+| ---------------------------- | --------------------------------------------: |
+| Activity or routine title    |                        120 Unicode characters |
+| Short source/reference label |                        200 Unicode characters |
+| URL                          | 2,048 characters and `https:` only by default |
+| Note or instructions         |                     10,000 Unicode characters |
+| Routine steps                |                               100 per routine |
+| BPM                          |                   Integer from 30 through 300 |
+| Imported JSON file           |                5 MiB before attachments exist |
 
 Limits should be enforced in both forms and import validation. They are proposed
 guardrails and can be changed before baselining.
@@ -1150,20 +1150,20 @@ records. The platform VPS, Caddy, and PostgreSQL are not in the runtime path.
 The final stack should be selected when implementation begins, independently of
 other products. A suitable starting point is:
 
-| Concern | Recommendation | Reason |
-| --- | --- | --- |
-| Language | TypeScript | Strong contracts for state, persistence, import, and locale catalogs |
-| Build | Vite | Existing platform familiarity and straightforward static output |
-| UI | React | The application has state-heavy forms, routing, session recovery, and derived views |
-| Routing | React Router or a small equivalent | Direct, testable application routes |
-| Local database | IndexedDB through Dexie | Versioned transactions and structured queries without hand-written IndexedDB plumbing |
-| Validation | Zod or equivalent schema validator | One explicit boundary for forms, migrations, and imported backups |
-| PWA | `vite-plugin-pwa` with prompt updates | Existing platform pattern and testable offline support |
-| Audio | Native Web Audio API | Precise scheduling without a server or large media dependency |
-| Icons | Lucide | Familiar controls and an existing accessible icon vocabulary |
-| Unit tests | Vitest | Fast TypeScript tests and existing platform familiarity |
-| Browser tests | Playwright | Real offline, persistence, responsive, and recovery flows |
-| Hosting | Cloudflare Pages | Static runtime with no VPS dependency |
+| Concern        | Recommendation                        | Reason                                                                                |
+| -------------- | ------------------------------------- | ------------------------------------------------------------------------------------- |
+| Language       | TypeScript                            | Strong contracts for state, persistence, import, and locale catalogs                  |
+| Build          | Vite                                  | Existing platform familiarity and straightforward static output                       |
+| UI             | React                                 | The application has state-heavy forms, routing, session recovery, and derived views   |
+| Routing        | React Router or a small equivalent    | Direct, testable application routes                                                   |
+| Local database | IndexedDB through Dexie               | Versioned transactions and structured queries without hand-written IndexedDB plumbing |
+| Validation     | Zod or equivalent schema validator    | One explicit boundary for forms, migrations, and imported backups                     |
+| PWA            | `vite-plugin-pwa` with prompt updates | Existing platform pattern and testable offline support                                |
+| Audio          | Native Web Audio API                  | Precise scheduling without a server or large media dependency                         |
+| Icons          | Lucide                                | Familiar controls and an existing accessible icon vocabulary                          |
+| Unit tests     | Vitest                                | Fast TypeScript tests and existing platform familiarity                               |
+| Browser tests  | Playwright                            | Real offline, persistence, responsive, and recovery flows                             |
+| Hosting        | Cloudflare Pages                      | Static runtime with no VPS dependency                                                 |
 
 This is a recommendation, not a requirement to copy the Listly or KeyPlay stack.
 React is proposed because this product has more persistent and derived UI state
@@ -1229,18 +1229,18 @@ location, contact list, or server identity.
 
 ### 16.2 Threat model
 
-| Threat | Consequence | MVP controls | Residual limitation |
-| --- | --- | --- | --- |
-| Malicious or compromised dependency | Script can read all local data | Few dependencies, lockfile, review, automated audit, pinned actions, strict CSP, no third-party runtime scripts | A trusted same-origin script remains powerful |
-| Cross-site scripting | Notes or imports execute code | React text rendering, no raw HTML, strict CSP, validated URLs, no Markdown in MVP | Future rich text requires a new review |
-| Malicious backup file | Memory exhaustion, prototype pollution, invalid records, or script content | File-size cap, strict schema, dangerous-key rejection, plain-text rendering, all-or-nothing transaction | User must still choose files carefully |
-| Spreadsheet formula injection | CSV opens an executable formula | Neutralize formula-leading cells and quote fields correctly | Spreadsheet software behavior varies |
-| Browser storage eviction | Practice history is lost | PWA installation guidance, persistent-storage request, backup reminders, JSON export/restore | Browser storage is never guaranteed durable |
-| Shared or stolen device | Another local user reads practice data | Rely on OS account lock and device encryption; provide Delete all data | No application-level identity in MVP |
-| Service-worker update during practice | Active session state is interrupted | Prompt update, persisted draft, no forced reload | Browser or OS can still terminate a tab |
-| External source URL | User visits a malicious site | Explicit navigation, `https:` validation, `noopener`/`noreferrer`, no embedded third-party pages | The destination is outside app control |
-| Future microphone or MIDI access | Unexpected sensor access or data disclosure | Just-in-time permission, local processing, visible active state, no network transmission | Browser and OS permission indicators remain authoritative |
-| Physical data corruption | Backup or database becomes unreadable | Versioning, transaction boundaries, import checksum, tested restore | A checksum does not replace multiple backup copies |
+| Threat                                | Consequence                                                                | MVP controls                                                                                                    | Residual limitation                                       |
+| ------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| Malicious or compromised dependency   | Script can read all local data                                             | Few dependencies, lockfile, review, automated audit, pinned actions, strict CSP, no third-party runtime scripts | A trusted same-origin script remains powerful             |
+| Cross-site scripting                  | Notes or imports execute code                                              | React text rendering, no raw HTML, strict CSP, validated URLs, no Markdown in MVP                               | Future rich text requires a new review                    |
+| Malicious backup file                 | Memory exhaustion, prototype pollution, invalid records, or script content | File-size cap, strict schema, dangerous-key rejection, plain-text rendering, all-or-nothing transaction         | User must still choose files carefully                    |
+| Spreadsheet formula injection         | CSV opens an executable formula                                            | Neutralize formula-leading cells and quote fields correctly                                                     | Spreadsheet software behavior varies                      |
+| Browser storage eviction              | Practice history is lost                                                   | PWA installation guidance, persistent-storage request, backup reminders, JSON export/restore                    | Browser storage is never guaranteed durable               |
+| Shared or stolen device               | Another local user reads practice data                                     | Rely on OS account lock and device encryption; provide Delete all data                                          | No application-level identity in MVP                      |
+| Service-worker update during practice | Active session state is interrupted                                        | Prompt update, persisted draft, no forced reload                                                                | Browser or OS can still terminate a tab                   |
+| External source URL                   | User visits a malicious site                                               | Explicit navigation, `https:` validation, `noopener`/`noreferrer`, no embedded third-party pages                | The destination is outside app control                    |
+| Future microphone or MIDI access      | Unexpected sensor access or data disclosure                                | Just-in-time permission, local processing, visible active state, no network transmission                        | Browser and OS permission indicators remain authoritative |
+| Physical data corruption              | Backup or database becomes unreadable                                      | Versioning, transaction boundaries, import checksum, tested restore                                             | A checksum does not replace multiple backup copies        |
 
 ### 16.3 Security requirements
 
@@ -1446,98 +1446,98 @@ project requirement document.
 
 ### 20.1 Product and scope
 
-| ID | Requirement | Verification |
-| --- | --- | --- |
-| `PC-PROD-001` | The product shall let a first-time user save a completed practice session within three minutes using the starter flow. | D |
-| `PC-PROD-002` | The MVP shall require no account, backend, database server, analytics service, or third-party runtime content. | I, A |
-| `PC-PROD-003` | The MVP shall support one implicit local profile per browser installation. | I, T |
-| `PC-PROD-004` | The product shall complement external learning material without reproducing or redistributing it. | I |
+| ID            | Requirement                                                                                                            | Verification |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `PC-PROD-001` | The product shall let a first-time user save a completed practice session within three minutes using the starter flow. | D            |
+| `PC-PROD-002` | The MVP shall require no account, backend, database server, analytics service, or third-party runtime content.         | I, A         |
+| `PC-PROD-003` | The MVP shall support one implicit local profile per browser installation.                                             | I, T         |
+| `PC-PROD-004` | The product shall complement external learning material without reproducing or redistributing it.                      | I            |
 
 ### 20.2 Activities and routines
 
-| ID | Requirement | Verification |
-| --- | --- | --- |
-| `PC-FR-001` | The user shall create, edit, archive, restore, and delete a practice activity. | T |
-| `PC-FR-002` | An activity shall support title, practice area, instructions, source reference, optional HTTPS URL, target BPM, and timestamps. | T |
-| `PC-FR-003` | The user shall create, edit, duplicate, archive, restore, and delete a routine. | T |
-| `PC-FR-004` | A routine shall contain explicitly ordered activity steps with planned duration and optional target BPM override. | T |
-| `PC-FR-005` | The user shall reorder routine steps without drag-and-drop. | T |
-| `PC-FR-006` | The user shall create an activity inline while editing a routine. | T |
-| `PC-FR-007` | The user shall start Quick Practice without first creating a routine. | T |
+| ID          | Requirement                                                                                                                     | Verification |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `PC-FR-001` | The user shall create, edit, archive, restore, and delete a practice activity.                                                  | T            |
+| `PC-FR-002` | An activity shall support title, practice area, instructions, source reference, optional HTTPS URL, target BPM, and timestamps. | T            |
+| `PC-FR-003` | The user shall create, edit, duplicate, archive, restore, and delete a routine.                                                 | T            |
+| `PC-FR-004` | A routine shall contain explicitly ordered activity steps with planned duration and optional target BPM override.               | T            |
+| `PC-FR-005` | The user shall reorder routine steps without drag-and-drop.                                                                     | T            |
+| `PC-FR-006` | The user shall create an activity inline while editing a routine.                                                               | T            |
+| `PC-FR-007` | The user shall start Quick Practice without first creating a routine.                                                           | T            |
 
 ### 20.3 Sessions and time
 
-| ID | Requirement | Verification |
-| --- | --- | --- |
-| `PC-FR-020` | The user shall start, pause, resume, finish, and discard a practice session. | T |
-| `PC-FR-021` | The timer shall calculate elapsed time from timestamps and accumulated paused duration rather than interval tick counts. | I, T |
-| `PC-FR-022` | An active or paused session shall recover after a page reload or application restart. | T |
-| `PC-FR-023` | A completed session and all its entries shall be committed atomically. | T |
-| `PC-FR-024` | The user shall be able to finish and save a partially completed routine. | T |
-| `PC-FR-025` | The user shall be able to correct a completed session duration from history. | T |
+| ID          | Requirement                                                                                                              | Verification |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| `PC-FR-020` | The user shall start, pause, resume, finish, and discard a practice session.                                             | T            |
+| `PC-FR-021` | The timer shall calculate elapsed time from timestamps and accumulated paused duration rather than interval tick counts. | I, T         |
+| `PC-FR-022` | An active or paused session shall recover after a page reload or application restart.                                    | T            |
+| `PC-FR-023` | A completed session and all its entries shall be committed atomically.                                                   | T            |
+| `PC-FR-024` | The user shall be able to finish and save a partially completed routine.                                                 | T            |
+| `PC-FR-025` | The user shall be able to correct a completed session duration from history.                                             | T            |
 
 ### 20.4 Metronome and reflection
 
-| ID | Requirement | Verification |
-| --- | --- | --- |
-| `PC-FR-030` | The metronome shall use Web Audio look-ahead scheduling and support integer tempos from 30 through 300 BPM. | I, T |
-| `PC-FR-031` | The metronome shall support direct BPM entry, step controls, tap tempo, 2/4, 3/4, 4/4, and 6/8 meters, and a downbeat accent. | T |
-| `PC-FR-032` | The metronome shall provide synchronized audio and non-color-only visual beat cues. | D, T |
-| `PC-FR-033` | The metronome shall start only after user activation and shall expose a usable audio-unavailable state. | T |
-| `PC-FR-040` | The user shall record plain-text session notes and `Next time` notes. | T |
-| `PC-FR-041` | The user shall optionally record target, starting, and ending BPM without the application interpreting BPM as musical quality. | I, T |
+| ID          | Requirement                                                                                                                    | Verification |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| `PC-FR-030` | The metronome shall use Web Audio look-ahead scheduling and support integer tempos from 30 through 300 BPM.                    | I, T         |
+| `PC-FR-031` | The metronome shall support direct BPM entry, step controls, tap tempo, 2/4, 3/4, 4/4, and 6/8 meters, and a downbeat accent.  | T            |
+| `PC-FR-032` | The metronome shall provide synchronized audio and non-color-only visual beat cues.                                            | D, T         |
+| `PC-FR-033` | The metronome shall start only after user activation and shall expose a usable audio-unavailable state.                        | T            |
+| `PC-FR-040` | The user shall record plain-text session notes and `Next time` notes.                                                          | T            |
+| `PC-FR-041` | The user shall optionally record target, starting, and ending BPM without the application interpreting BPM as musical quality. | I, T         |
 
 ### 20.5 History, goals, and progress
 
-| ID | Requirement | Verification |
-| --- | --- | --- |
-| `PC-FR-050` | The user shall review, edit, and delete completed sessions from reverse-chronological history. | T |
-| `PC-FR-051` | The product shall report weekly duration, practice days, practice-area distribution, recent activities, and selected-activity tempo history. | T |
-| `PC-FR-052` | Calendar statistics shall use local-time day boundaries and handle daylight-saving transitions. | T |
-| `PC-FR-053` | Historical entries shall preserve activity and routine snapshots after source records are changed or archived. | T |
-| `PC-FR-054` | The user shall optionally configure weekly minutes and practice-day goals. | T |
+| ID          | Requirement                                                                                                                                  | Verification |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `PC-FR-050` | The user shall review, edit, and delete completed sessions from reverse-chronological history.                                               | T            |
+| `PC-FR-051` | The product shall report weekly duration, practice days, practice-area distribution, recent activities, and selected-activity tempo history. | T            |
+| `PC-FR-052` | Calendar statistics shall use local-time day boundaries and handle daylight-saving transitions.                                              | T            |
+| `PC-FR-053` | Historical entries shall preserve activity and routine snapshots after source records are changed or archived.                               | T            |
+| `PC-FR-054` | The user shall optionally configure weekly minutes and practice-day goals.                                                                   | T            |
 
 ### 20.6 Data, backup, and offline operation
 
-| ID | Requirement | Verification |
-| --- | --- | --- |
-| `PC-DATA-001` | User-owned structured data shall be stored in IndexedDB under a versioned schema. | I, T |
-| `PC-DATA-002` | Supported older schemas shall migrate forward transactionally without record loss. | T |
-| `PC-DATA-003` | On the first meaningful write, the app shall request persistent storage where the browser supports it and expose the result. | D, T |
-| `PC-BKP-001` | The user shall export a versioned, full-fidelity JSON backup. | T |
-| `PC-BKP-002` | Restoring an exported backup shall reproduce equivalent activities, routines, sessions, goals, and relevant settings. | T |
-| `PC-BKP-003` | Restore shall validate the complete file before atomically replacing current data. | T |
-| `PC-BKP-004` | The user shall export completed session entries as safely escaped CSV. | T |
-| `PC-BKP-005` | CSV cells beginning with spreadsheet formula characters shall be neutralized. | T |
-| `PC-ARCH-001` | Every MVP function shall work after an offline reload following the first successful load. | T |
-| `PC-ARCH-002` | An application update shall not force a reload during an active or paused session. | T, D |
+| ID            | Requirement                                                                                                                  | Verification |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `PC-DATA-001` | User-owned structured data shall be stored in IndexedDB under a versioned schema.                                            | I, T         |
+| `PC-DATA-002` | Supported older schemas shall migrate forward transactionally without record loss.                                           | T            |
+| `PC-DATA-003` | On the first meaningful write, the app shall request persistent storage where the browser supports it and expose the result. | D, T         |
+| `PC-BKP-001`  | The user shall export a versioned, full-fidelity JSON backup.                                                                | T            |
+| `PC-BKP-002`  | Restoring an exported backup shall reproduce equivalent activities, routines, sessions, goals, and relevant settings.        | T            |
+| `PC-BKP-003`  | Restore shall validate the complete file before atomically replacing current data.                                           | T            |
+| `PC-BKP-004`  | The user shall export completed session entries as safely escaped CSV.                                                       | T            |
+| `PC-BKP-005`  | CSV cells beginning with spreadsheet formula characters shall be neutralized.                                                | T            |
+| `PC-ARCH-001` | Every MVP function shall work after an offline reload following the first successful load.                                   | T            |
+| `PC-ARCH-002` | An application update shall not force a reload during an active or paused session.                                           | T, D         |
 
 ### 20.7 Security and privacy
 
-| ID | Requirement | Verification |
-| --- | --- | --- |
-| `PC-SEC-001` | Import shall reject files larger than the accepted limit, malformed JSON, unsupported versions, and records outside the schema without changing current data. | T |
-| `PC-SEC-002` | Imported object structures shall reject prototype-pollution keys. | T |
-| `PC-SEC-003` | User and imported text shall render without HTML execution. | T |
-| `PC-SEC-004` | External references shall accept only approved URL protocols and shall open without opener access or referrer leakage. | T |
-| `PC-SEC-005` | Production shall enforce a restrictive CSP without inline scripts, `unsafe-eval`, or third-party runtime origins. | I, T |
-| `PC-PRIV-001` | The MVP shall transmit no practice data, personal identifier, or analytics event. | A, T |
-| `PC-PRIV-002` | The application shall explain local storage, export, deletion, and eviction limits in plain language. | I |
+| ID            | Requirement                                                                                                                                                   | Verification |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `PC-SEC-001`  | Import shall reject files larger than the accepted limit, malformed JSON, unsupported versions, and records outside the schema without changing current data. | T            |
+| `PC-SEC-002`  | Imported object structures shall reject prototype-pollution keys.                                                                                             | T            |
+| `PC-SEC-003`  | User and imported text shall render without HTML execution.                                                                                                   | T            |
+| `PC-SEC-004`  | External references shall accept only approved URL protocols and shall open without opener access or referrer leakage.                                        | T            |
+| `PC-SEC-005`  | Production shall enforce a restrictive CSP without inline scripts, `unsafe-eval`, or third-party runtime origins.                                             | I, T         |
+| `PC-PRIV-001` | The MVP shall transmit no practice data, personal identifier, or analytics event.                                                                             | A, T         |
+| `PC-PRIV-002` | The application shall explain local storage, export, deletion, and eviction limits in plain language.                                                         | I            |
 
 ### 20.8 Accessibility, responsiveness, and operations
 
-| ID | Requirement | Verification |
-| --- | --- | --- |
-| `PC-A11Y-001` | Every core flow shall conform to WCAG 2.2 AA with no critical automated accessibility finding and a successful manual keyboard pass. | T, A |
-| `PC-A11Y-002` | Audio shall not be the sole means of communicating metronome or session state. | T, D |
-| `PC-A11Y-003` | The interface shall honor `prefers-reduced-motion`. | T |
-| `PC-A11Y-004` | Charts shall expose equivalent data through a table or textual summary. | T |
-| `PC-UX-001` | Core content and controls shall fit at 320 CSS pixels without horizontal page scrolling. | T |
-| `PC-UX-002` | Primary session controls shall remain visible and stable when timer digits or state labels change. | T |
-| `PC-I18N-001` | User-facing strings shall be externalized in typed locale catalogs with Brazilian Portuguese and English support. | I, T |
-| `PC-OPS-001` | Production shall deploy as static assets to Cloudflare Pages with no VPS, Caddy, or PostgreSQL dependency. | I |
-| `PC-OPS-002` | CI shall validate formatting, lint, types, unit tests, accessibility checks, production build, artifact policy, and browser tests before deployment. | I, T |
-| `PC-OPS-003` | Rollback shall redeploy a previously validated immutable artifact or Pages deployment. | D |
+| ID            | Requirement                                                                                                                                          | Verification |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `PC-A11Y-001` | Every core flow shall conform to WCAG 2.2 AA with no critical automated accessibility finding and a successful manual keyboard pass.                 | T, A         |
+| `PC-A11Y-002` | Audio shall not be the sole means of communicating metronome or session state.                                                                       | T, D         |
+| `PC-A11Y-003` | The interface shall honor `prefers-reduced-motion`.                                                                                                  | T            |
+| `PC-A11Y-004` | Charts shall expose equivalent data through a table or textual summary.                                                                              | T            |
+| `PC-UX-001`   | Core content and controls shall fit at 320 CSS pixels without horizontal page scrolling.                                                             | T            |
+| `PC-UX-002`   | Primary session controls shall remain visible and stable when timer digits or state labels change.                                                   | T            |
+| `PC-I18N-001` | User-facing strings shall be externalized in typed locale catalogs with Brazilian Portuguese and English support.                                    | I, T         |
+| `PC-OPS-001`  | Production shall deploy as static assets to Cloudflare Pages with no VPS, Caddy, or PostgreSQL dependency.                                           | I            |
+| `PC-OPS-002`  | CI shall validate formatting, lint, types, unit tests, accessibility checks, production build, artifact policy, and browser tests before deployment. | I, T         |
+| `PC-OPS-003`  | Rollback shall redeploy a previously validated immutable artifact or Pages deployment.                                                               | D            |
 
 ## 21. Delivery and operations
 
@@ -1609,42 +1609,42 @@ must be recorded in the infrastructure inventory even though it has no VPS route
 
 ## 22. Risks and mitigations
 
-| Risk | Likelihood | Impact | Mitigation or decision |
-| --- | --- | --- | --- |
-| The app becomes more work than a notebook | Medium | High | Optimize the start flow; keep required fields minimal; evaluate real use before Phase 2 |
-| Browser storage is cleared | Medium | High | Persistent-storage request, explicit limitation, backup reminders, tested JSON restore |
-| Metronome timing is unreliable on a target device | Medium | High | Web Audio scheduling, real-device validation, foreground-only guarantee |
-| Feature scope turns into a music-learning platform | Medium | High | Preserve non-goals and method-neutral activity model |
-| Statistics encourage quantity over quality | Medium | Medium | Keep reflection and context visible; avoid scores and dominant streaks |
-| Mobile session UI is hard to use on a music stand | Medium | Medium | Prototype at physical distance; test tablet landscape and iPhone dimensions |
-| Import introduces a client-side vulnerability | Low | High | Strict size/schema validation, text-only rendering, atomic restore, security tests |
-| Cross-device sync is added casually | Medium | High | Keep it a separate tier requiring an ADR and threat model |
-| Rich local attachments exhaust storage | Medium in Phase 3 | Medium | Keep them out of MVP; add quota UI and type/size limits before implementation |
-| Course links or names create copyright confusion | Low | Medium | Store references only; never copy, scrape, host, or share protected material |
-| Bilingual UI increases scope | Medium | Low | Typed catalogs from day one; permit one reviewed public locale at first release if necessary |
+| Risk                                               | Likelihood        | Impact | Mitigation or decision                                                                       |
+| -------------------------------------------------- | ----------------- | ------ | -------------------------------------------------------------------------------------------- |
+| The app becomes more work than a notebook          | Medium            | High   | Optimize the start flow; keep required fields minimal; evaluate real use before Phase 2      |
+| Browser storage is cleared                         | Medium            | High   | Persistent-storage request, explicit limitation, backup reminders, tested JSON restore       |
+| Metronome timing is unreliable on a target device  | Medium            | High   | Web Audio scheduling, real-device validation, foreground-only guarantee                      |
+| Feature scope turns into a music-learning platform | Medium            | High   | Preserve non-goals and method-neutral activity model                                         |
+| Statistics encourage quantity over quality         | Medium            | Medium | Keep reflection and context visible; avoid scores and dominant streaks                       |
+| Mobile session UI is hard to use on a music stand  | Medium            | Medium | Prototype at physical distance; test tablet landscape and iPhone dimensions                  |
+| Import introduces a client-side vulnerability      | Low               | High   | Strict size/schema validation, text-only rendering, atomic restore, security tests           |
+| Cross-device sync is added casually                | Medium            | High   | Keep it a separate tier requiring an ADR and threat model                                    |
+| Rich local attachments exhaust storage             | Medium in Phase 3 | Medium | Keep them out of MVP; add quota UI and type/size limits before implementation                |
+| Course links or names create copyright confusion   | Low               | Medium | Store references only; never copy, scrape, host, or share protected material                 |
+| Bilingual UI increases scope                       | Medium            | Low    | Typed catalogs from day one; permit one reviewed public locale at first release if necessary |
 
 ## 23. Open decisions
 
 These decisions should be answered before scaffolding the project. The recommended
 choice is shown where one exists.
 
-| Decision | Recommended starting choice | Why it matters |
-| --- | --- | --- |
-| Final product name | Keep Practice Companion as a working name; test alternatives before branding | Determines repository display name and portfolio language, but not architecture |
-| Domain | `practice.bwinkeler.com` | Clear and durable even if the display name changes |
-| UI language | pt-BR default, English optional | Fits the likely user and existing bilingual product pattern |
-| UI framework | React with TypeScript and Vite | Fits persistent forms, routing, recovery, and derived views |
-| Storage library | IndexedDB through Dexie | Reduces transaction and migration plumbing |
-| First-release themes | Light default plus dark | Supports practice environments without dark-mode bias |
-| Week start | User setting, Monday default | Affects all weekly goals and charts |
-| Metronome range | 30-300 BPM | Broad enough without arbitrary values |
-| Metronome meters | 2/4, 3/4, 4/4, and 6/8 | Useful MVP range without becoming a rhythm sequencer |
-| Restore behavior | Full replacement only | Easier to explain and validate atomically than merge |
-| Reminder cadence | Backup reminder only in MVP | Browser schedule reminders are unreliable without push |
-| Multi-profile support | Exclude from MVP | Browser/device profiles already provide separation |
-| Real sync | Exclude through Phase 3 | Preserves local-first privacy and operational simplicity |
-| Attachments | Exclude from MVP | Avoids quota, copyright, and file-validation scope |
-| Progress charts | Native accessible components before adding a chart dependency | Keeps bundle and accessibility under control |
+| Decision              | Recommended starting choice                                                  | Why it matters                                                                  |
+| --------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Final product name    | Keep Practice Companion as a working name; test alternatives before branding | Determines repository display name and portfolio language, but not architecture |
+| Domain                | `practice.bwinkeler.com`                                                     | Clear and durable even if the display name changes                              |
+| UI language           | pt-BR default, English optional                                              | Fits the likely user and existing bilingual product pattern                     |
+| UI framework          | React with TypeScript and Vite                                               | Fits persistent forms, routing, recovery, and derived views                     |
+| Storage library       | IndexedDB through Dexie                                                      | Reduces transaction and migration plumbing                                      |
+| First-release themes  | Light default plus dark                                                      | Supports practice environments without dark-mode bias                           |
+| Week start            | User setting, Monday default                                                 | Affects all weekly goals and charts                                             |
+| Metronome range       | 30-300 BPM                                                                   | Broad enough without arbitrary values                                           |
+| Metronome meters      | 2/4, 3/4, 4/4, and 6/8                                                       | Useful MVP range without becoming a rhythm sequencer                            |
+| Restore behavior      | Full replacement only                                                        | Easier to explain and validate atomically than merge                            |
+| Reminder cadence      | Backup reminder only in MVP                                                  | Browser schedule reminders are unreliable without push                          |
+| Multi-profile support | Exclude from MVP                                                             | Browser/device profiles already provide separation                              |
+| Real sync             | Exclude through Phase 3                                                      | Preserves local-first privacy and operational simplicity                        |
+| Attachments           | Exclude from MVP                                                             | Avoids quota, copyright, and file-validation scope                              |
+| Progress charts       | Native accessible components before adding a chart dependency                | Keeps bundle and accessibility under control                                    |
 
 ## 24. Implementation roadmap
 
