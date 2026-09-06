@@ -5,7 +5,7 @@
 - Platform architecture version: 1.3
 - Service ID: `practice`
 - Product name: Practice Companion
-- Repository: https://github.com/brunowinkeler/bwinkeler-practice
+- Repository: https://github.com/brunowinkeler/bwinkeler-music-practice
 - Owner: Bruno Winkeler
 - Criticality: experimental
 

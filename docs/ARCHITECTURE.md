@@ -6,7 +6,7 @@
 | Version        | 1.0                              |
 | Status         | Accepted                         |
 | Service ID     | `practice`                       |
-| Repository     | `bwinkeler-practice`             |
+| Repository     | `bwinkeler-music-practice`       |
 | Planned origin | `https://practice.bwinkeler.com` |
 
 ## 1. Scope
@@ -14,7 +14,7 @@
 Practice Companion is a single-user, local-first Progressive Web App for
 planning, running, and reviewing piano and keyboard practice. This document
 describes how the application is built. The product concept and its rationale
-live in `PRACTICE-COMPANION-PROPOSAL.md` at the workspace root.
+live in `PRACTICE-COMPANION-PROPOSAL.md` in this directory.
 
 ## 2. Runtime topology
 

@@ -10,7 +10,7 @@ when the learner exports a file.
 
 - Production origin (planned): https://practice.bwinkeler.com
 - Interface languages: Brazilian Portuguese (default) and English
-- Product concept: `../PRACTICE-COMPANION-PROPOSAL.md`
+- Product concept: `docs/PRACTICE-COMPANION-PROPOSAL.md`
 
 ## What it does
 
