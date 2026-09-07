@@ -54,7 +54,19 @@ Requirement identifiers match the proposal so the two documents stay traceable.
 | `PC-FR-040` | Plain-text session and `Next time` notes.                                   | T      | Met    | `e2e/practice.spec.ts`, no HTML rendering                                 |
 | `PC-FR-041` | Optional target, starting, and ending BPM, without treating BPM as quality. | I, T   | Met    | `progress.tempoNotice` copy, `tests/stats.test.ts`                        |
 
-## 5. History, goals, and progress
+## 5. Chord dictionary
+
+| ID          | Requirement                                                                                           | Method | Status | Evidence                                                   |
+| ----------- | ----------------------------------------------------------------------------------------------------- | ------ | ------ | ---------------------------------------------------------- |
+| `PC-FR-060` | Every combination of seventeen root spellings and thirty-seven qualities resolves offline.            | T      | Met    | `tests/chords.test.ts`, `tests/guitar.test.ts` sweep tests |
+| `PC-FR-061` | Each chord tone carries the letter of its degree, double accidentals included.                        | T      | Met    | `tests/chords.test.ts` spelling tests                      |
+| `PC-FR-062` | Published guitar shapes are playable: one hand position, contiguous strings, four fingers or a barre. | T      | Met    | `tests/guitar.test.ts`                                     |
+| `PC-FR-063` | A shape sounds every tone the chord requires and states the tones it omits.                           | T      | Met    | `tests/guitar.test.ts`                                     |
+| `PC-FR-064` | Keyboard voicings offer the root position and each inversion, with the sounding octave named.         | T      | Met    | `tests/piano.test.ts`                                      |
+| `PC-FR-065` | A chord can be reached by symbol search and by a shareable address.                                   | T      | Met    | `e2e/chords.spec.ts`                                       |
+| `PC-FR-066` | The dictionary opens during a session without leaving it, and a chord can become a practice activity. | T      | Met    | `e2e/chords.spec.ts`                                       |
+
+## 6. History, goals, and progress
 
 | ID          | Requirement                                                                              | Method | Status | Evidence                              |
 | ----------- | ---------------------------------------------------------------------------------------- | ------ | ------ | ------------------------------------- |
@@ -64,7 +76,7 @@ Requirement identifiers match the proposal so the two documents stay traceable.
 | `PC-FR-053` | History keeps activity and routine snapshots after the source changes.                   | T      | Met    | `tests/repository.test.ts`            |
 | `PC-FR-054` | Optional weekly minute and practice-day goals.                                           | T      | Met    | `SettingsPage`, `TodayPage`           |
 
-## 6. Data, backup, and offline operation
+## 7. Data, backup, and offline operation
 
 | ID            | Requirement                                                                            | Method | Status             | Evidence                                                                     |
 | ------------- | -------------------------------------------------------------------------------------- | ------ | ------------------ | ---------------------------------------------------------------------------- |
@@ -79,7 +91,7 @@ Requirement identifiers match the proposal so the two documents stay traceable.
 | `PC-ARCH-001` | Every function works after an offline reload following the first load.                 | T      | Met                | `e2e/pwa.spec.ts` offline test                                               |
 | `PC-ARCH-002` | An update never forces a reload during an active or paused session.                    | T, D   | Met                | `AppShell` update banner disabled while a session exists                     |
 
-## 7. Security and privacy
+## 8. Security and privacy
 
 | ID            | Requirement                                                                                          | Method | Status                                              | Evidence                                                           |
 | ------------- | ---------------------------------------------------------------------------------------------------- | ------ | --------------------------------------------------- | ------------------------------------------------------------------ |
@@ -91,14 +103,14 @@ Requirement identifiers match the proposal so the two documents stay traceable.
 | `PC-PRIV-001` | No practice data, identifier, or analytics event is transmitted.                                     | A, T   | Met                                                 | `e2e/pwa.spec.ts` third-party request test                         |
 | `PC-PRIV-002` | Local storage, export, deletion, and eviction limits are explained in plain language.                | I      | Met                                                 | Onboarding storage notice, Settings storage and privacy text       |
 
-## 8. Accessibility, responsiveness, and operations
+## 9. Accessibility, responsiveness, and operations
 
 | ID            | Requirement                                                                                                 | Method | Status                                                  | Evidence                                                    |
 | ------------- | ----------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------- | ----------------------------------------------------------- |
 | `PC-A11Y-001` | Core flows conform to WCAG 2.2 AA with no critical automated finding and a keyboard pass.                   | T, A   | Automated checks met; manual screen-reader pass pending | `e2e/a11y.spec.ts`                                          |
 | `PC-A11Y-002` | Audio is never the only channel for metronome or session state.                                             | T, D   | Met                                                     | Visual beat, status text, live announcements                |
 | `PC-A11Y-003` | The interface honours `prefers-reduced-motion`.                                                             | T      | Met                                                     | `src/styles.css`                                            |
-| `PC-A11Y-004` | Charts expose the same data through a table.                                                                | T      | Met                                                     | `e2e/a11y.spec.ts` table test                               |
+| `PC-A11Y-004` | Charts and diagrams expose the same data through text.                                                      | T      | Met                                                     | `e2e/a11y.spec.ts` table test, `e2e/chords.spec.ts`         |
 | `PC-UX-001`   | Content fits 320 CSS pixels without horizontal scrolling.                                                   | T      | Met                                                     | `e2e/a11y.spec.ts` viewport test                            |
 | `PC-UX-002`   | Session controls stay visible and stable as timer digits change.                                            | T      | Met                                                     | Tabular numerals, `e2e/mobile.spec.ts`                      |
 | `PC-I18N-001` | Strings are externalised in typed catalogues for pt-BR and English.                                         | I, T   | Met                                                     | `tests/i18n.test.ts`                                        |
@@ -106,7 +118,7 @@ Requirement identifiers match the proposal so the two documents stay traceable.
 | `PC-OPS-002`  | CI validates formatting, lint, types, unit tests, accessibility, build, artefact policy, and browser tests. | I, T   | Met                                                     | `.github/workflows/ci.yaml`                                 |
 | `PC-OPS-003`  | Rollback redeploys a previously validated deployment.                                                       | D      | Documented; not yet exercised                           | `docs/OPERATIONS.md`                                        |
 
-## 9. Open items before the first production release
+## 10. Open items before the first production release
 
 1. Attach `practice.bwinkeler.com` to the Pages project and record it in the
    infrastructure inventory.

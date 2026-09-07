@@ -2,7 +2,14 @@ import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 import { openApp, startStarterRoutine } from "./support";
 
-const pages = ["/", "/routines", "/history", "/progress", "/settings"];
+const pages = [
+    "/",
+    "/routines",
+    "/chords",
+    "/history",
+    "/progress",
+    "/settings",
+];
 
 test.describe("accessibility", () => {
     for (const path of pages) {

@@ -22,6 +22,10 @@ when the learner exports a file.
   step navigation, per-activity notes and tempo, and draft recovery.
 - **Metronome** — Web Audio look-ahead scheduling, 30–300 BPM, 2/4, 3/4, 4/4
   and 6/8, tap tempo, accented downbeat, and a non-colour-only visual pulse.
+- **Chord dictionary** — every root and thirty-seven qualities, spelled by
+  interval, drawn as searched guitar shapes with fingering and as keyboard
+  voicings with inversions; reachable during a session and convertible into a
+  practice activity in one click.
 - **History and progress** — editable session history, weekly minutes and
   practice days, distribution per practice area, recent activities, and tempo
   evidence, each chart backed by a data table.

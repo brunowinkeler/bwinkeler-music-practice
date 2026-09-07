@@ -28,6 +28,7 @@ const paths = {
         "M12 4a8 8 0 108 8h-2a6 6 0 11-6-6v3l4-4-4-4zM11 8h2v5l4 2-1 1.7-5-2.7z",
     chart: "M4 20V4h2v14h14v2zM8.5 16V9h3v7zm5 0V6h3v10z",
     metronome: "M11 3h2l5 18H6zM9.5 14h5l.5 2h-6z",
+    chords: "M4 4h16v2H4zM4 9.5h16v1.2H4zM4 14h16v1.2H4zM4 18.5h16v1.2H4zM7.4 4h1.2v15.7H7.4zM11.4 4h1.2v15.7h-1.2zM15.4 4h1.2v15.7h-1.2z",
     close: "M5.5 4L12 10.5 18.5 4 20 5.5 13.5 12 20 18.5 18.5 20 12 13.5 5.5 20 4 18.5 10.5 12 4 5.5z",
     alert: "M12 3l10 18H2zm-1 6h2v6h-2zm0 8h2v2h-2z",
     external:

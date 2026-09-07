@@ -9,6 +9,7 @@ import type { MessageKey } from "../i18n";
 const destinations: { to: string; labelKey: MessageKey; icon: IconName }[] = [
     { to: "/", labelKey: "nav.today", icon: "home" },
     { to: "/routines", labelKey: "nav.routines", icon: "list" },
+    { to: "/chords", labelKey: "nav.chords", icon: "chords" },
     { to: "/history", labelKey: "nav.history", icon: "history" },
     { to: "/progress", labelKey: "nav.progress", icon: "chart" },
     { to: "/settings", labelKey: "nav.settings", icon: "settings" },

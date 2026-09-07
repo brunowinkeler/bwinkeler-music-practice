@@ -35,6 +35,14 @@ export function areaMessageKey(builtInKey: BuiltInAreaKey): MessageKey {
     return `areas.${builtInKey}` as MessageKey;
 }
 
+export function chordFamilyMessageKey(family: string): MessageKey {
+    return `chords.family.${family}` as MessageKey;
+}
+
+export function chordQualityMessageKey(qualityId: string): MessageKey {
+    return `chords.name.${qualityId}` as MessageKey;
+}
+
 export function detectLanguage(
     candidates: readonly string[],
 ): LanguageCode | null {

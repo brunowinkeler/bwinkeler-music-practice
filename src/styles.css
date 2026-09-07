@@ -17,6 +17,9 @@
     --tempo: #1d4e89;
     --accent: #8a6516;
     --focus: #1d4e89;
+    --key-white: #ffffff;
+    --key-black: #16211b;
+    --key-edge: #b7c4bc;
     --radius: 8px;
     --shadow: 0 1px 2px rgb(16 35 27 / 12%);
     color-scheme: light;
@@ -35,6 +38,9 @@
     --tempo: #8fc0ff;
     --accent: #e0b558;
     --focus: #8fc0ff;
+    --key-white: #ccd6d0;
+    --key-black: #0b100d;
+    --key-edge: #4a5b52;
     color-scheme: dark;
 }
 
@@ -52,6 +58,9 @@
         --tempo: #8fc0ff;
         --accent: #e0b558;
         --focus: #8fc0ff;
+        --key-white: #ccd6d0;
+        --key-black: #0b100d;
+        --key-edge: #4a5b52;
         color-scheme: dark;
     }
 }
@@ -227,6 +236,18 @@ a {
 
 .shell-focus .main {
     padding-bottom: 1.5rem;
+}
+
+/* Six destinations do not fit one row on the narrowest phones. */
+@media (max-width: 26rem) {
+    .nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main {
+        padding-bottom: 9rem;
+    }
 }
 
 @media (min-width: 60rem) {
@@ -791,6 +812,68 @@ input[type="range"] {
 .data-table thead th {
     color: var(--muted);
     font-weight: 600;
+}
+
+/* Chord dictionary -------------------------------------------------------- */
+
+.chord-explorer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chord-symbol {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.chord-tones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0.5rem 0 0;
+}
+
+.chord-tones span span {
+    margin-left: 0.25rem;
+}
+
+.piano-diagram {
+    display: block;
+    width: 100%;
+    max-width: 34rem;
+    height: auto;
+    margin: 0.75rem 0 1rem;
+}
+
+.chord-shapes {
+    list-style: none;
+    margin: 0.5rem 0 0.75rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    gap: 1rem;
+}
+
+.chord-shape p {
+    margin: 0;
+}
+
+.chord-shape-title {
+    font-weight: 600;
+}
+
+.chord-shape-frets {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+}
+
+.chord-diagram {
+    display: block;
+    width: 100%;
+    max-width: 8.5rem;
+    height: auto;
 }
 
 /* Dialogs ----------------------------------------------------------------- */

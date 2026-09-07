@@ -6,6 +6,11 @@ import { Icon } from "../../components/Icon";
 import { ConfirmDialog, Modal } from "../../components/Modal";
 import { MetronomePanel } from "./MetronomePanel";
 import {
+    ChordExplorer,
+    defaultChordSelection,
+    type ChordSelection,
+} from "../chords/ChordExplorer";
+import {
     completeSession,
     entryElapsedMs,
     flushRunningTime,
@@ -46,6 +51,10 @@ export function PracticePage() {
     const session = local ?? stored ?? null;
     const [finishing, setFinishing] = useState(false);
     const [discarding, setDiscarding] = useState(false);
+    const [chordLookup, setChordLookup] = useState(false);
+    const [chordSelection, setChordSelection] = useState<ChordSelection>(
+        defaultChordSelection,
+    );
     const [note, setNote] = useState(stored?.note ?? "");
     const [nextTimeNote, setNextTimeNote] = useState(
         stored?.nextTimeNote ?? "",
@@ -336,6 +345,18 @@ export function PracticePage() {
                 <div className="practice-side">
                     <MetronomePanel targetBpm={entry?.targetBpm ?? null} />
 
+                    <button
+                        type="button"
+                        id="open-chord-lookup"
+                        className="button"
+                        onClick={() => {
+                            setChordLookup(true);
+                        }}
+                    >
+                        <Icon name="chords" />
+                        {t("practice.chordLookup")}
+                    </button>
+
                     <section className="card">
                         <h2>{t("common.bpm")}</h2>
                         {entry?.targetBpm ? (
@@ -540,6 +561,30 @@ export function PracticePage() {
                     });
                 }}
             />
+
+            <Modal
+                open={chordLookup}
+                title={t("chords.title")}
+                onClose={() => {
+                    setChordLookup(false);
+                }}
+                footer={
+                    <button
+                        type="button"
+                        className="button"
+                        onClick={() => {
+                            setChordLookup(false);
+                        }}
+                    >
+                        {t("common.close")}
+                    </button>
+                }
+            >
+                <ChordExplorer
+                    selection={chordSelection}
+                    onChange={setChordSelection}
+                />
+            </Modal>
         </div>
     );
 }

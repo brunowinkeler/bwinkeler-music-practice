@@ -7,6 +7,7 @@ import { RoutineEditorPage } from "../features/routines/RoutineEditorPage";
 import { ActivityEditorPage } from "../features/routines/ActivityEditorPage";
 import { QuickPracticePage } from "../features/practice/QuickPracticePage";
 import { PracticePage } from "../features/practice/PracticePage";
+import { ChordsPage } from "../features/chords/ChordsPage";
 import { HistoryPage } from "../features/history/HistoryPage";
 import { SessionDetailPage } from "../features/history/SessionDetailPage";
 import { ProgressPage } from "../features/progress/ProgressPage";
@@ -50,6 +51,7 @@ export function App() {
                 />
                 <Route path="/practice/quick" element={<QuickPracticePage />} />
                 <Route path="/practice/:sessionId" element={<PracticePage />} />
+                <Route path="/chords" element={<ChordsPage />} />
                 <Route path="/history" element={<HistoryPage />} />
                 <Route
                     path="/history/:sessionId"
