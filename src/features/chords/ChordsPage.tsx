@@ -1,6 +1,7 @@
 import { useNavigate, useSearchParams } from "react-router";
 import { useAppStore } from "../../app/store";
 import { chordSymbol, chordTones, resolveChord } from "../../music/chords";
+import { noteName } from "../../music/notes";
 import { Icon } from "../../components/Icon";
 import {
     ChordExplorer,
@@ -14,9 +15,15 @@ export function ChordsPage() {
     const [params, setParams] = useSearchParams();
     const navigate = useNavigate();
 
+    const chord = resolveChord(
+        params.get("root") ?? defaultChordSelection.root,
+        params.get("quality") ?? defaultChordSelection.quality,
+    );
+    // Resolving first keeps an edited address from selecting a chord that does
+    // not exist.
     const selection: ChordSelection = {
-        root: params.get("root") ?? defaultChordSelection.root,
-        quality: params.get("quality") ?? defaultChordSelection.quality,
+        root: noteName(chord.root),
+        quality: chord.quality.id,
         instrument: params.get("instrument") === "guitar" ? "guitar" : "piano",
     };
 
@@ -28,7 +35,6 @@ export function ChordsPage() {
         if (!area) {
             return;
         }
-        const chord = resolveChord(selection.root, selection.quality);
         const activity = await store.createActivity({
             title: t("chords.activityTitle", {
                 chord: chordSymbol(chord.root, chord.quality),
